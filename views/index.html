@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Guestbook</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Sign the guestbook!</h1>
+
+    <form method="POST" action="/submit" class="guestbook-form">
+      <div class="form-row">
+        <label for="name"> 👋 Your name</label>
+        <input type="text" name="name" id="name" placeholder="Glitch Fish" required/>
+      </div>
+      <div class="form-row">
+        <label for="email"> 💌 Your email</label>
+        <input type="email" name="email" id="email"  placeholder="fishy@glitch.com" />
+      </div>
+       <div class="form-row">
+        <label for="location">🗺 Where you're from</label>
+        <input type="location" name="location" id="location"  placeholder="The Lost City of Atlantis" />
+      </div>
+      <div class="form-row">
+        <label for="comment"> ✨ Leave us a note</label>
+        <textarea name="comment" placeholder="This party is great! It's so cool that you remixed all your own party apps from Glitch!"></textarea>
+      </div>
+
+      <input type="submit" class="button" value="You're in!"/>
+    </form>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
